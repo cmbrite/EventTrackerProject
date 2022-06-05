@@ -47,7 +47,14 @@ class StudyTest {
 	void test() {
 		assertNotNull(study);
 		assertEquals("Java", study.getSubject());
+		assertEquals("JPA", study.getSubSection());
 		assertEquals(60, study.getStudyDuration());
+		assertEquals("Home", study.getLocation());
+		assertEquals(2022, study.getDate().getYear());
+		assertEquals(06, study.getDate().getMonthValue());
+		assertEquals(02, study.getDate().getDayOfMonth());
+			
+								
 	}
 
 
