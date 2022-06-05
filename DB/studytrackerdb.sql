@@ -23,7 +23,10 @@ DROP TABLE IF EXISTS `study` ;
 CREATE TABLE IF NOT EXISTS `study` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `subject` VARCHAR(45) NULL,
+  `subject_section` VARCHAR(45) NULL,
   `duration` INT NULL,
+  `location` VARCHAR(45) NULL,
+  `date` DATE NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -43,8 +46,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `studytrackerdb`;
-INSERT INTO `study` (`id`, `subject`, `duration`) VALUES (1, 'Java', 60);
-INSERT INTO `study` (`id`, `subject`, `duration`) VALUES (2, 'Javascript', 60);
+INSERT INTO `study` (`id`, `subject`, `subject_section`, `duration`, `location`, `date`) VALUES (1, 'Java', 'JPA', 60, 'Home', '2022-06-02');
+INSERT INTO `study` (`id`, `subject`, `subject_section`, `duration`, `location`, `date`) VALUES (2, 'Javascript', 'Fundamentals', 120, 'Home', '2022-06-03');
+INSERT INTO `study` (`id`, `subject`, `subject_section`, `duration`, `location`, `date`) VALUES (3, 'CSS', 'Styling', 30, 'Starbucks', '2022-06-04');
 
 COMMIT;
 

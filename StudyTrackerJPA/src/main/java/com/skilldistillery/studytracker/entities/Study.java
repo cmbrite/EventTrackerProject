@@ -1,5 +1,6 @@
 package com.skilldistillery.studytracker.entities;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -17,8 +18,15 @@ public class Study {
 	
 	private String subject;
 	
+	@Column(name="subject_section")
+	private String subSection;
+	
 	@Column(name="duration")
 	private int studyDuration;
+	
+	private String location;
+	
+	private LocalDate date;
 
 	public Study() {
 		super();
@@ -40,6 +48,14 @@ public class Study {
 		this.subject = subject;
 	}
 
+	public String getSubSection() {
+		return subSection;
+	}
+
+	public void setSubSection(String subSection) {
+		this.subSection = subSection;
+	}
+
 	public int getStudyDuration() {
 		return studyDuration;
 	}
@@ -48,9 +64,26 @@ public class Study {
 		this.studyDuration = studyDuration;
 	}
 
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
 	@Override
 	public String toString() {
-		return "Study [id=" + id + ", subject=" + subject + ", studyDuration=" + studyDuration + "]";
+		return "Study [id=" + id + ", subject=" + subject + ", subSection=" + subSection + ", studyDuration="
+				+ studyDuration + ", location=" + location + ", date=" + date + "]";
 	}
 
 	@Override
@@ -69,6 +102,7 @@ public class Study {
 		Study other = (Study) obj;
 		return id == other.id;
 	}
+
 	
 	
 }
