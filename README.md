@@ -8,7 +8,7 @@ Week 12 Homework for Skill Distillery
 # Table of Contents
 * <a href="#creator"> Creator</a>
 * <a href="#overview"> Overview</a>
-* <a href="#features"> Description</a>
+* <a href="#features"> Features</a>
 * <a href="#implementation"> Implementation</a>
 * <a href="#technologies-used"> Technologies Used</a>
 * <a href="#lessons-learned"> Lessons Learned</a>
@@ -104,7 +104,6 @@ Currently access to the functionality of this application is limited to Postman.
 </h2>
 
 * Java
-* Spring MVC
 * Spring Boot
 * JPA
 * SQL
