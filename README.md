@@ -71,27 +71,27 @@ Currently access to the functionality of this application is limited to Postman.
   <tr>
     <td>List all existing study session entries</td>
     <td><b>GET</b></td>
-    <td>http://localhost:8083/api/studies</td>
+    <td>http://54.215.123.44:8080/StudyTrackerRest/api/studies</td>
   </tr>
   <tr>
     <td>List a specific session entry by its id</td>
     <td><b>GET</b></td>
-    <td>http://localhost:8083/api/studies/{id}</td>
+    <td>http://54.215.123.44:8080/StudyTrackerRest/api/studies/{id}</td>
   </tr>
   <tr>
     <td>Create new study session entry</td>
     <td><b>POST</b></td>
-    <td>http://localhost:8083/api/studies</td>
+    <td>http://54.215.123.44:8080/StudyTrackerRest/api/studies</td>
   </tr>
   <tr>
     <td>Edit an existing study session entry by its id</td>
     <td><b>PATCH</b></td>
-    <td>http://localhost:8083/api/studies/{id}</td>
+    <td>http://54.215.123.44:8080/StudyTrackerRest/api/studies/{id}</td>
   </tr>
   <tr>
     <td>Delete existing study session entry by its id</td>
     <td><b>DELETE</b></td>
-    <td>http://localhost:8083/api/studies/{id}</td>
+    <td>http://54.215.123.44:8080/StudyTrackerRest/api/studies/{id}</td>
   </tr>
 </table><br>
 
