@@ -22,7 +22,7 @@ Week 12 Homework for Skill Distillery
 <b>Christopher Brite</b>
 
 * <a href="https://github.com/cmbrite">GitHub </a>
-* <a href="www.linkedin.com/in/christopher-brite">LinkedIn </a>
+* <a href="https://www.linkedin.com/in/christopher-brite">LinkedIn </a>
 
 <h2 dir="auto">
 <a id="overview" class="anchor" aria-hidden="true" href="#overview"></a>
