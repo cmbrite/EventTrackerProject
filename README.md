@@ -105,6 +105,7 @@ Currently access to the functionality of this application is limited to Postman.
 
 * Java
 * Spring Boot
+* REST
 * JPA
 * SQL
 * MySQLWorkbench
