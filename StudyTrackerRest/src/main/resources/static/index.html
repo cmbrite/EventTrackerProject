@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Study Tracker</title>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<h1>Study Your Class Off!</h1>
+<form name="sessionForm">
+		<input type="number" name="studyId">
+		<button name="lookup">Get Session by Id</button>
+	</form>
+	<div id="studyList">
+	</div>
+	
+	<div id="createSession">
+	
+	<hr>
+	<h3>New Study Session Entry</h3>
+	<form name="newSessionForm">
+		<label for="subject">Study Subject</label> 
+		<input type="text" id="subject"><br>
+		
+		<label for="subSection">Sub-Section</label>
+		<input type="text" id="subSection"><br>
+		
+		<label for="studyDuration">Study Duration</label> 
+		<input type="number" id="studyDuration" min="1" max="1440"><br> 
+		
+		<label for="location">Location</label> 
+		<input type="text" id="location"><br> 
+		
+		<label for="date">Date</label> 
+		<input type="date" id="date">
+		<br>
+		
+		<button type='submit' id='button' name='addSessionButton'>Add Study Session!</button>
+
+
+	</form>
+	</div>
+	
+</body>
+</html>
