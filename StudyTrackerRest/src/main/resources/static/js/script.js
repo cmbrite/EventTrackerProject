@@ -48,7 +48,7 @@ function getStudySession(sessionId) {
 //Takes session and organizes info into table and displays using JS
 function displayStudySession(session) {
 	document.getElementById('home').style.display = "block";
-	document.getElementById('home').onclick = function(e){
+	document.getElementById('home').onclick = function(e) {
 		e.preventDefault();
 		window.location.reload();
 	}
@@ -219,21 +219,19 @@ function displayStudySessions(sessions) {
 		sum = sum + dur;
 	});
 	let avg = sum / sessions.length;
-	
-	document.getElementById('total').onclick = function(e){
-		let h3 = document.createElement('h3');
-		h3.textContent = sum;
-		document.body.appendChild(h3);
+	document.getElementById('field').style.display = "none";
+	document.getElementById('total').onclick = function() {
+		document.getElementById('field').style.display = "block";
+		document.getElementById('field').value = sum;
 	}
-	document.getElementById('avg').onclick = function(e){
-		let h3h = document.createElement('h3');
-		h3h.textContent = avg;
-		document.body.appendChild(h3h);
+	document.getElementById('avg').onclick = function() {
+		document.getElementById('field').style.display = "block";
+		document.getElementById('field').value = avg;
 	}
 	let tableDiv = document.getElementById('studyList');
 	tableDiv.appendChild(table);
-	
-	
+
+
 }
 
 
