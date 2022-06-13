@@ -7,6 +7,7 @@ window.addEventListener('load', function(e) {
 function init() {
 	console.log('In init()');
 	document.getElementById('editSessionForm').style.display = "none";
+	document.getElementById('home').style.display = "none";
 	lookUp();
 	loadStudySessions();
 	createSession();
@@ -46,6 +47,11 @@ function getStudySession(sessionId) {
 }
 //Takes session and organizes info into table and displays using JS
 function displayStudySession(session) {
+	document.getElementById('home').style.display = "block";
+	document.getElementById('home').onclick = function(e){
+		e.preventDefault();
+		window.location.reload();
+	}
 	document.getElementById('studyList').style.display = "none";
 	document.getElementById('createSession').style.display = "none";
 	document.getElementById('editSessionForm').style.display = "block";
@@ -184,7 +190,7 @@ function displayStudySessions(sessions) {
 
 	let tBody = document.createElement('tbody');
 	table.appendChild(tBody);
-
+	let sum = 0;
 	sessions.forEach(function(value, index, array) {
 		let rowHead2 = document.createElement('tr');
 		let td = document.createElement('td');
@@ -209,10 +215,25 @@ function displayStudySessions(sessions) {
 			document.getElementById('studyList').textContent = '';
 			document.getElementById('createSession').textContent = '';
 		}
-
+		let dur = value.studyDuration;
+		sum = sum + dur;
 	});
+	let avg = sum / sessions.length;
+	
+	document.getElementById('total').onclick = function(e){
+		let h3 = document.createElement('h3');
+		h3.textContent = sum;
+		document.body.appendChild(h3);
+	}
+	document.getElementById('avg').onclick = function(e){
+		let h3h = document.createElement('h3');
+		h3h.textContent = avg;
+		document.body.appendChild(h3h);
+	}
 	let tableDiv = document.getElementById('studyList');
 	tableDiv.appendChild(table);
+	
+	
 }
 
 

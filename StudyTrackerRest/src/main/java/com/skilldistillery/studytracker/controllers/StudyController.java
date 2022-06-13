@@ -22,22 +22,21 @@ import com.skilldistillery.studytracker.services.StudyService;
 public class StudyController {
 	@Autowired
 	private StudyService studyServ;
-	
-	
+
 	@GetMapping("studies")
-	public List<Study> index(){
+	public List<Study> index() {
 		return studyServ.index();
 	}
-	
+
 	@GetMapping("studies/{id}")
 	public Study findStudy(@PathVariable Integer id, HttpServletResponse resp) {
 		Study study = studyServ.findById(id);
-		if(study == null) {
+		if (study == null) {
 			resp.setStatus(404);
 		}
 		return study;
 	}
-	
+
 	@PostMapping("studies")
 	public Study createStudySession(@RequestBody Study study, HttpServletResponse resp) {
 		Study newStudy = null;
@@ -50,27 +49,27 @@ public class StudyController {
 		}
 		return newStudy;
 	}
-			
+
 	@PatchMapping("studies/{id}")
 	public Study update(@RequestBody Study study, @PathVariable Integer id, HttpServletResponse resp) {
 		Study updated = null;
-		
+
 		try {
 			updated = studyServ.updateStudySession(study, id);
 		} catch (Exception e) {
 			e.printStackTrace();
 			resp.setStatus(400);
 		}
-		
+
 		return updated;
 	}
-	
+
 	@DeleteMapping("studies/{id}")
 	public Boolean delete(@PathVariable Integer id, HttpServletResponse resp) {
 		Boolean deleted = false;
 		try {
 			deleted = studyServ.deleteStudySession(id);
-			if(deleted) {
+			if (deleted) {
 				resp.setStatus(204);
 			} else {
 				resp.setStatus(404);
@@ -80,5 +79,4 @@ public class StudyController {
 		}
 		return deleted;
 	}
-
 }

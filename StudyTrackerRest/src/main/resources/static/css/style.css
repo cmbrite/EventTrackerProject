@@ -1,0 +1,11 @@
+#studyList tr:hover {
+	background-color:#8da9ff;
+}
+
+#studyList{
+	 align-items: center;
+	
+}
+#createSession{
+	 align-items: center;
+}

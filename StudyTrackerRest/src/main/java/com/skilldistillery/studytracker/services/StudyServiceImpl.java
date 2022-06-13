@@ -10,20 +10,21 @@ import com.skilldistillery.studytracker.entities.Study;
 import com.skilldistillery.studytracker.repositories.StudyRepository;
 
 @Service
-public class StudyServiceImpl implements StudyService{
+public class StudyServiceImpl implements StudyService {
 
 	@Autowired
 	private StudyRepository studyRepo;
-	
+
 	@Override
 	public List<Study> index() {
 		return studyRepo.findAll();
 	}
-	
+
+
 	@Override
 	public Study findById(Integer id) {
 		Optional<Study> op = studyRepo.findById(id);
-		if(op.isPresent()) {
+		if (op.isPresent()) {
 			Study study = op.get();
 			return study;
 		}
@@ -51,7 +52,5 @@ public class StudyServiceImpl implements StudyService{
 		studyRepo.deleteById(id);
 		return !studyRepo.existsById(id);
 	}
-	
-	
 
 }

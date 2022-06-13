@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Study Tracker</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<h1>Study Your Class Off!</h1>
-
+<button type='button' id='home' name='home'>Home</button><br>
 
 	<form name="sessionForm">
 		<input type="number" name="studyId">
@@ -29,14 +30,15 @@
 			<br>
 
 			<button type='submit' id='edit' name='editSessionButton'>Edit
-				Session!</button>
+				Session</button>
 			<br>
-			<button type='submit' id='delete' name='delete'>Delete!</button>
+			<button type='submit' id='delete' name='delete'>Delete</button>
 		</form>
 	</div>
 	<br>
 	<div id="studyList">
-		<!-- <button type='submit' id='listButton' name='listSession'>List All Entries</button> -->
+		<button type='button' id='total' name='total'>Total Study Time</button>
+		<button type='button' id='avg' name='average'>Average Study Time</button>
 	</div>
 
 	<div id="createSession">
@@ -55,7 +57,7 @@
 			<br>
 
 			<button type='submit' id='button' name='addSessionButton'>Add
-				Study Session!</button>
+				Study Session</button>
 
 
 		</form>
