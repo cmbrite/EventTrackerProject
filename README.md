@@ -30,7 +30,7 @@ Week 12 Homework for Skill Distillery
 # Overview
 </h2>
 
-Study Your Class Off is an all purpose journal for tracking daily study sessions.  Users are able to create, read, edit and delete study session entries to keep track of their learning progress. 
+Study Your Class Off is an all purpose journal for tracking daily study sessions.  Users are able to create, read, edit and delete study session entries to keep track of their learning progress. Users are also able to see their total study time and average study session length.
 
 
 <h2 dir="auto">
@@ -44,11 +44,12 @@ Study Your Class Off is an all purpose journal for tracking daily study sessions
 * Edit existing study sessions
 * Delete existing study sessions
 * List all existing study session entries
-
+* See average study session length
+* See total time studied
+* Web Interface
 
  <b><em>Future Implementations</em></b>
 
-* Web Interface
 * User account creation
 * User created study goals
 * Achievements
@@ -60,7 +61,7 @@ Study Your Class Off is an all purpose journal for tracking daily study sessions
 # Implementation
 </h2>
 
-Currently access to the functionality of this application is limited to Postman. <br> The paths to execute the various available features are as follows:<hr>
+The backend of this application is implemented using Java while the front end is a dynamic webpage using JavaScript and HTMl. Full functionality of this application takes place on one page which changes based on user input. <br> The paths to execute the various available features are as follows:<hr>
 
 <table>
   <tr>
@@ -116,6 +117,7 @@ Currently access to the functionality of this application is limited to Postman.
 * Hibernate
 * Gradle
 * Postman
+* JavaScript
 
 
 <h2 dir="auto">
@@ -127,5 +129,6 @@ Currently access to the functionality of this application is limited to Postman.
 * Services like Spring Boot and REST really simplify the implementation of CRUD. 
 * Planning out or being familiar with the database you are working with before writing any code 
 * The initial setup of a project is crucial and troubleshooting time can be minimized by being attentive during that process. 
+* JavaScript can simplify web page manipulation.
 
 
