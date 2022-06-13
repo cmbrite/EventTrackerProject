@@ -7,39 +7,59 @@
 </head>
 <body>
 	<h1>Study Your Class Off!</h1>
-<form name="sessionForm">
+
+
+	<form name="sessionForm">
 		<input type="number" name="studyId">
 		<button name="lookup">Get Session by Id</button>
+		<hr>
 	</form>
+	<div id="studySession">
+		<form name="editSessionForm" id="editSessionForm">
+			<label for="subject">Study Subject</label> 
+			<input type="text" id="subject"><br> <label for="subSection">Sub-Section</label>
+			<input type="text" id="subSection"><br> 
+			<label for="studyDuration">Study Duration</label> 
+			<input type="number" id="studyDuration" min="1" max="1440"><br> 
+			<label for="location">Location</label> 
+			<input type="text" id="location"><br>
+
+			<label for="date">Date</label> 
+			<input type="date" id="date">
+			<br>
+
+			<button type='submit' id='edit' name='editSessionButton'>Edit
+				Session!</button>
+			<br>
+			<button type='submit' id='delete' name='delete'>Delete!</button>
+		</form>
+	</div>
+	<br>
 	<div id="studyList">
+		<!-- <button type='submit' id='listButton' name='listSession'>List All Entries</button> -->
 	</div>
-	
+
 	<div id="createSession">
-	
-	<hr>
-	<h3>New Study Session Entry</h3>
-	<form name="newSessionForm">
-		<label for="subject">Study Subject</label> 
-		<input type="text" id="subject"><br>
-		
-		<label for="subSection">Sub-Section</label>
-		<input type="text" id="subSection"><br>
-		
-		<label for="studyDuration">Study Duration</label> 
-		<input type="number" id="studyDuration" min="1" max="1440"><br> 
-		
-		<label for="location">Location</label> 
-		<input type="text" id="location"><br> 
-		
-		<label for="date">Date</label> 
-		<input type="date" id="date">
-		<br>
-		
-		<button type='submit' id='button' name='addSessionButton'>Add Study Session!</button>
+
+		<hr>
+		<h3>New Study Session Entry</h3>
+		<form name="newSessionForm">
+			<label for="subject">Study Subject</label> <input type="text"
+				id="subject"><br> <label for="subSection">Sub-Section</label>
+			<input type="text" id="subSection"><br> <label
+				for="studyDuration">Study Duration</label> <input type="number"
+				id="studyDuration" min="1" max="1440"><br> <label
+				for="location">Location</label> <input type="text" id="location"><br>
+
+			<label for="date">Date</label> <input type="date" id="date">
+			<br>
+
+			<button type='submit' id='button' name='addSessionButton'>Add
+				Study Session!</button>
 
 
-	</form>
+		</form>
 	</div>
-	
+
 </body>
 </html>

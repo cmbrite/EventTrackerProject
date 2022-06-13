@@ -6,8 +6,8 @@ import com.skilldistillery.studytracker.entities.Study;
 
 public interface StudyService {
 	List<Study> index();
-	Study findById(int id);
+	Study findById(Integer id);
 	Study createStudySession(Study study);
-	Study updateStudySession(Study study, int id);
-	Boolean deleteStudySession(int id);
+	Study updateStudySession(Study study, Integer id);
+	Boolean deleteStudySession(Integer id);
 }

@@ -21,7 +21,7 @@ public class StudyServiceImpl implements StudyService{
 	}
 	
 	@Override
-	public Study findById(int id) {
+	public Study findById(Integer id) {
 		Optional<Study> op = studyRepo.findById(id);
 		if(op.isPresent()) {
 			Study study = op.get();
@@ -36,7 +36,7 @@ public class StudyServiceImpl implements StudyService{
 	}
 
 	@Override
-	public Study updateStudySession(Study study, int id) {
+	public Study updateStudySession(Study study, Integer id) {
 		Study existingSession = findById(id);
 		existingSession.setSubject(study.getSubject());
 		existingSession.setSubSection(study.getSubSection());
@@ -47,7 +47,7 @@ public class StudyServiceImpl implements StudyService{
 	}
 
 	@Override
-	public Boolean deleteStudySession(int id) {
+	public Boolean deleteStudySession(Integer id) {
 		studyRepo.deleteById(id);
 		return !studyRepo.existsById(id);
 	}

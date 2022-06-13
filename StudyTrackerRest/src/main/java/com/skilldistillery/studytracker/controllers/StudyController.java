@@ -30,7 +30,7 @@ public class StudyController {
 	}
 	
 	@GetMapping("studies/{id}")
-	public Study findStudy(@PathVariable int id, HttpServletResponse resp) {
+	public Study findStudy(@PathVariable Integer id, HttpServletResponse resp) {
 		Study study = studyServ.findById(id);
 		if(study == null) {
 			resp.setStatus(404);
@@ -52,7 +52,7 @@ public class StudyController {
 	}
 			
 	@PatchMapping("studies/{id}")
-	public Study update(@RequestBody Study study, @PathVariable int id, HttpServletResponse resp) {
+	public Study update(@RequestBody Study study, @PathVariable Integer id, HttpServletResponse resp) {
 		Study updated = null;
 		
 		try {
@@ -66,7 +66,7 @@ public class StudyController {
 	}
 	
 	@DeleteMapping("studies/{id}")
-	public Boolean delete(@PathVariable int id, HttpServletResponse resp) {
+	public Boolean delete(@PathVariable Integer id, HttpServletResponse resp) {
 		Boolean deleted = false;
 		try {
 			deleted = studyServ.deleteStudySession(id);

@@ -22,7 +22,7 @@ public class Study {
 	private String subSection;
 	
 	@Column(name="duration")
-	private int studyDuration;
+	private Integer studyDuration;
 	
 	private String location;
 	
@@ -56,11 +56,11 @@ public class Study {
 		this.subSection = subSection;
 	}
 
-	public int getStudyDuration() {
+	public Integer getStudyDuration() {
 		return studyDuration;
 	}
 
-	public void setStudyDuration(int studyDuration) {
+	public void setStudyDuration(Integer studyDuration) {
 		this.studyDuration = studyDuration;
 	}
 
