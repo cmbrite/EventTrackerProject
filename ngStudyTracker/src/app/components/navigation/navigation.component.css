@@ -1,7 +1,13 @@
 #navbar {
   color: rgb(0, 0, 0);
+  padding-left: 0%;
+  padding-right: 0%;
+  width: 100%;
+  vertical-align: auto;
 }
 
 .nav-link{
   color: black;
 }
+
+

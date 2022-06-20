@@ -1,1 +1,74 @@
-<p>about works!</p>
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>Overview</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <p>Study Your Class Off is an all purpose journal for tracking daily study sessions.
+        Users are able to create, read, edit and delete study session entries to keep track of their learning progress.
+        Users are also able to see their total study time and average study session length.
+      </p>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Features">
+    <ng-template ngbPanelContent>
+      <ul>
+      <li>Create new study session entries</li>
+      <li>Edit existing study sessions</li>
+      <li>Delete existing study sessions</li>
+      <li>List all existing study session entries</li>
+      <li>See average study session length</li>
+      <li> See total time studied</li>
+      <li>Web Interface</li>
+    </ul>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Future Implementations">
+    <ng-template ngbPanelContent>
+      <ul>
+        <li>User account creation</li>
+        <li>User created study goals</li>
+        <li>Achievements</li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Implementation">
+    <ng-template ngbPanelContent>
+    <p>The backend of this application is implemented using Java while the front end is a dynamic webpage using JavaScript, Angular and HTML.
+      Full functionality of this application takes place on one page which changes based on user input.</p>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Technologies Used">
+    <ng-template ngbPanelContent>
+      <ul>
+      <li>Java</li>
+      <li>Spring Boot</li>
+      <li>REST</li>
+      <li>JPA</li>
+      <li>SQL</li>
+      <li>MySQLWorkbench</li>
+      <li>Terminal</li>
+      <li>Git</li>
+      <li> GitHub</li>
+      <li>SpringToolSuite4</li>
+      <li>Hibernate</li>
+      <li>Gradle</li>
+      <li>Postman</li>
+      <li>JavaScript</li>
+      <li>BootStrap</li>
+      <li>Angular</li>
+    </ul>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Lessons Learned">
+    <ng-template ngbPanelContent>
+      <ul>
+        <li>Services like Spring Boot and REST really simplify the implementation of CRUD.</li>
+        <li>Planning out or being familiar with the database you are working with before writing any code</li>
+        <li>The initial setup of a project is crucial and troubleshooting time can be minimized by being attentive during that process.</li>
+        <li>JavaScript can simplify web page manipulation.</li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+</ngb-accordion>
