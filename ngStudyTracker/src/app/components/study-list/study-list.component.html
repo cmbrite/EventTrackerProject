@@ -1,0 +1,122 @@
+
+
+
+
+
+<div *ngIf="!selected">
+  <h4 class="container-fluid">
+    Study Sessions
+  </h4>
+  <table>
+<thead>
+  <th>Subject</th>
+  <th>Sub-Section</th>
+  <th>Duration</th>
+  <th>Location</th>
+  <th>Date</th>
+</thead>
+<tbody>
+  <tr class="hoverRow" *ngFor="let sessions of sessionList" (click)="displaySession(sessions)">
+  <td>{{ sessions.subject }}</td>
+  <td>{{sessions.subSection}}</td>
+  <td>{{sessions.studyDuration}}</td>
+  <td>{{sessions.location}}</td>
+  <td>{{sessions.date}}</td>
+  </tr>
+</tbody>
+  </table>
+</div>
+
+<div class="card" style="width: 18rem;" *ngIf="selected && !editSession">
+  <div class="card-body">
+  <table style="width:50%">
+    <tr>
+      <th>ID:</th>
+      <td>{{ selected.id }}</td>
+    </tr>
+    <tr>
+      <th>Subject:</th>
+      <td>{{ selected.subject }}</td>
+    </tr>
+    <tr>
+      <th>Section:</th>
+      <td>{{ selected.subSection }}</td>
+    </tr>
+    <tr>
+      <th>Duration:</th>
+      <td>{{ selected.studyDuration }}</td>
+    </tr>
+    <tr>
+      <th>Location:</th>
+      <td>{{ selected.location }}</td>
+    </tr>
+    <tr>
+      <th>Date:</th>
+      <td>{{ selected.date }}</td>
+    </tr>
+  </table>
+  <button class="btn btn-primary" (click)="displayTable()">
+    Back <i class="fa fa-flip-vertical">
+   <i class="fa fa-undo fa-spin" aria-hidden="true"></i>
+  </i>
+  </button>
+  <button class="btn btn-warning" (click)="setEditTSession()">
+    Edit <i class="fa fa-cog fa-spin"></i>
+  </button>
+<button class="btn btn-danger" (click)="deleteSession(selected)">Delete</button>
+</div>
+</div>
+<hr>
+
+<div class="container" *ngIf="editSession">
+  Subject: <input type="text"class="form-control" name="subect" [(ngModel)]="editSession.subject">
+  Sub-Section: <input type="text" class="form-control" name="section" [(ngModel)]="editSession.subSection">
+  Duration: <input type="number" class="form-control" name="duration" [(ngModel)]="editSession.studyDuration"><br>
+  Location: <input type="text" class="form-control" name="location" [(ngModel)]="editSession.location"><br>
+  Date: <input type="date" class="form-control" name="date" [(ngModel)]="editSession.date"><br>
+  <button class="btn btn-success" (click)="updateSession(editSession)">Save</button>
+  <button class="btn btn-danger" (click)="editSession = null">Cancel</button>
+</div>
+
+<!-- <div class="container" *ngIf="!selected">
+  <button class="btn btn-primary" (click)="totalStudyTime(); display = !display">
+    Total Study Time</button><br>
+    <div *ngIf="display">
+      <h6>Total Study Time: {{ totalStudyTime()}}</h6>
+    </div><br>
+    <button class="btn btn-primary" (click)="averageStudyTime(); display2 = !display2">
+    Avg Study Time</button><br>
+        <div *ngIf="display2">
+          <h6>Average Study Time: {{ averageStudyTime()}}</h6>
+          </div><br>
+          <button class="btn" [ngClass]="getSessionCount()>10?'btn-success':getSessionCount()>5?'btn-warning':'btn-danger'" (click)="checkSessionLevel(); display3 = !display3">
+    Progress</button>
+    <div *ngIf="display3">
+      <h6>{{ getSessionCount() }} Study Entries - {{ checkSessionLevel() }}</h6>
+      </div>
+</div> -->
+
+<div class="container" *ngIf="!selected">
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>&#9733; <b>Progress</b>&#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <h6>{{ getSessionCount() }} Study Entries - {{ checkSessionLevel() }}</h6>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Total Study Time">
+    <ng-template ngbPanelContent>
+      <h6>Total Study Time: {{ totalStudyTime()}}</h6>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Simple">
+    <ng-template ngbPanelContent>
+      <h6>Average Study Time: {{ averageStudyTime()}}</h6>
+    </ng-template>
+  </ngb-panel>
+
+</ngb-accordion>
+</div>
+
